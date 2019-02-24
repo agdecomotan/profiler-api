@@ -29,7 +29,9 @@ try {
         if ($db->execute() > 0) {
             $records = $db->fetchAll();
             foreach ($records as &$record) {
+                echo json_encode('AA' . $record);
                 $value = new Student($record);
+                echo json_encode('BB' . $value);
                 array_push($response, $value);
             }
         }

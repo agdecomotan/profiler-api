@@ -12,6 +12,7 @@ class Student
 
     public function __construct(array $data)
     {
+        echo $data;
         if ($data !== null) {
             $this->id = (int) $data['id'] ?? 0;
             $this->studentNumber = $data['studentNumber'] ?? null;
