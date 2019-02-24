@@ -25,7 +25,8 @@ try {
     if ($id === 0) {
         $db = new Db('SELECT * FROM `students`');
         $response = array();
-
+        echo json_encode($db->execute());
+        
         if ($db->execute() > 0) {
             $records = $db->fetchAll();
             foreach ($records as &$record) {
