@@ -30,12 +30,12 @@ try {
         if ($db->execute() > 0) {
             $records = $db->fetchAll();
             foreach ($records as &$record) {
+                echo json_encode($record);
                 $value = new Student($record);
                 array_push($response, $value);
             }
         }
-
-        echo json_encode($response);
+        
         Http::ReturnSuccess($response);
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
