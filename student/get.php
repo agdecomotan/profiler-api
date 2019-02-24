@@ -25,6 +25,7 @@ try {
     if ($id === 0) {
         $db = new Db('SELECT * FROM `students`');
         $response = array();
+        echo json_encode($db->execute());
 
         if ($db->execute() > 0) {
             $records = $db->fetchAll();
@@ -34,6 +35,7 @@ try {
             }
         }
 
+        echo json_encode($response);
         Http::ReturnSuccess($response);
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
