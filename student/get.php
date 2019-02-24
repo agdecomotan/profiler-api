@@ -25,20 +25,14 @@ try {
     if ($id === 0) {
         $db = new Db('SELECT * FROM `students`');
         $response = array();
-        echo json_encode($db->execute());
-        
+
         if ($db->execute() > 0) {
             $records = $db->fetchAll();
             foreach ($records as &$record) {
-                echo json_encode('AA' . $record);
                 $value = new Student($record);
-                echo json_encode('BB' . $value);
                 array_push($response, $value);
             }
         }
-
-        $record = $db->fetchAll();
-        echo json_encode($record);
 
         Http::ReturnSuccess($response);
     } else {
