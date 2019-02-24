@@ -5,6 +5,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/db.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/http.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/models/student.php';
 
+echo "Test";
 
 use Exception;
 use PDOException;
