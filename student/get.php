@@ -5,8 +5,6 @@ require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/db.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/http.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/models/student.php';
 
-echo "Test";
-
 use Exception;
 use PDOException;
 
@@ -35,7 +33,10 @@ try {
                 array_push($response, $value);
             }
         }
-       
+
+        $record = $db->fetchAll();
+        echo json_encode($record);
+
         Http::ReturnSuccess($response);
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
