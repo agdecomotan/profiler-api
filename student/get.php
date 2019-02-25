@@ -39,7 +39,7 @@ try {
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
-        if ($rowCount === 0) {
+        if ($rowCount > 0) {
             foreach ($records as &$record) {
                 $value = new Student($record);
                 array_push($response, $value);
