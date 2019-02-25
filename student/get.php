@@ -29,7 +29,7 @@ try {
         //     Http::ReturnError(404, array('message' => 'No records.'));
         // } else {
             // $records = $db->fetchAll();       
-            Http::ReturnSuccess($records);
+            Http::ReturnSuccess(count($records);
         // }       
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
