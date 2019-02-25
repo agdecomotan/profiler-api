@@ -3,6 +3,7 @@ namespace AGD\Profiler;
 
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/db.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/http.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/models/student.php'
 
 use Exception;
 use PDOException;
@@ -30,7 +31,23 @@ try {
             Http::ReturnError(404, array('message' => 'No records.'));
         } else {      
             Http::ReturnSuccess($records);
-        }       
+        }
+
+
+        $db = new Db('SELECT * FROM `students`');
+        $response = array();
+        $db->execute();
+        $records = $db->fetchAll();
+        $rowCount = count($records);
+        if ($rowCount === 0) {
+            foreach ($records as &$record) {
+                $value = new Student($record);
+                array_push($response, $value);
+            }
+            Http::ReturnSuccess($response);
+        } else {      
+            Http::ReturnError(404, array('message' => 'No records.'));
+        }     
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
         $db->bindParam(':id', $id);

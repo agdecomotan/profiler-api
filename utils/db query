@@ -27,6 +27,7 @@ email) VALUES
 -------
 
 
-sudo chmod 775 /var/www/mysite
-sudo chmod 664 /var/www/mysite/sqlite.db
+sudo chown -R apache profiler-api
+sudo chmod -R 775 profiler.db
+
 sudo usermod -a -G pi www-data
