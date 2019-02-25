@@ -1,5 +1,5 @@
 <?php
-namespace AGD\Wis;
+namespace AGD\Profiler;
 
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/db.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/http.php';
