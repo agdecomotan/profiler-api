@@ -24,19 +24,9 @@ if (array_key_exists('id', $_GET)) {
 try {
     if ($id === 0) {
         $db = new Db('SELECT * FROM `students`');
-        $response = array();
-        echo json_encode($db->execute());
-
-        if ($db->execute() > 0) {
-            $records = $db->fetchAll();
-            echo json_encode($records);
-            foreach ($records as &$record) {
-                $value = new Student($record);
-                array_push($response, $value);
-            }
-        }
-        
-        Http::ReturnSuccess($response);
+        $db->execute()
+        $records = $db->fetchAll();
+        Http::ReturnSuccess($records);
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
         $db->bindParam(':id', $id);
