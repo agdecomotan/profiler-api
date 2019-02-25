@@ -22,7 +22,7 @@ class Db
     {
         // Execute statement and return rowcount
         $this->statement->execute();
-        return $this->statement->fetchColumn();
+        return $this->statement->rowCount();
     }
     public function lastInsertId()
     {
