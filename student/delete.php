@@ -33,7 +33,7 @@ if (is_null($input)) {
             $db->bindParam(':id', property_exists($input, 'id') ? $input->id : 0);
             $db->execute();
             $db->commit();
-            Http::ReturnSuccess(array('message' => 'Message deleted.', 'id' => $input->id));
+            Http::ReturnSuccess(array('message' => 'Object deleted.', 'id' => $input->id));
         }
     } catch (PDOException $pe) {
         Db::ReturnDbError($pe);

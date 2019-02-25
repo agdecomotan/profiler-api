@@ -5,7 +5,7 @@ class Http
     public static function SetDefaultHeaders($method)
     {
         // HTTP headers for response
-        header('Access-Control-Allow-Orgin: *');
+        header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Methods: ' . $method);
         header('Content-Type: application/json; charset=UTF-8');
     }
