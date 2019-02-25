@@ -24,9 +24,10 @@ if (array_key_exists('id', $_GET)) {
 try {
     if ($id === 0) {
         $db = new Db('SELECT * FROM `students`');        
-        $db->execute();      
-        $records = $db->fetchAll();
-        echo json_encode($records);        
+            
+
+        echo json_encode($db->execute());   
+        $records = $db->fetchAll();       
         Http::ReturnSuccess($records);
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
