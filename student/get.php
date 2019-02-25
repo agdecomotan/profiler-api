@@ -24,7 +24,7 @@ try {
     if ($id === 0) {
         $db = new Db('SELECT * FROM `students`'); 
         $db->execute();
-        $record = $db->fetchColumn();
+        $record = $db->rowCount();
         $records = $db->fetchAll();
         // if ($db->rowcount() === 0) {
         //     Http::ReturnError(404, array('message' => 'No records.'));
