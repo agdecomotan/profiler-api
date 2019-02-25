@@ -9,6 +9,7 @@ class Student
     public $yearLevel; 
     public $program;
     public $email;
+    public $datecreated;
 
     public function __construct(array $data)
     {
@@ -20,6 +21,7 @@ class Student
             $this->yearLevel = $data['yearLevel'] ?? null;
             $this->program = $data['program'] ?? null;
             $this->email = $data['email'] ?? null;
+            $this->datecreated = $data['datecreated'] ?? null;
         }
     }
 }

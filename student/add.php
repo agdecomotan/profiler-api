@@ -21,8 +21,8 @@ if (is_null($input)) {
     Http::ReturnError(400, array('message' => 'Object details are empty.'));
 } else {
     try {
-        $db = new Db('INSERT INTO `students`(studentNumber, firstName, lastName, yearLevel, program, email) 
-                    VALUES(:studentNumber, :firstName, :lastName, :yearLevel, :program, :email)');
+        $db = new Db('INSERT INTO `students`(studentNumber, firstName, lastName, yearLevel, program, email, datecreated) 
+                    VALUES(:studentNumber, :firstName, :lastName, :yearLevel, :program, :email, :datecreated)');
         
         $db->bindParam(':studentNumber', property_exists($input, 'studentNumber') ? $input->studentNumber : null);
         $db->bindParam(':firstName', property_exists($input, 'firstName') ? $input->firstName : null);
@@ -30,7 +30,7 @@ if (is_null($input)) {
         $db->bindParam(':yearLevel', property_exists($input, 'yearLevel') ? $input->yearLevel : null);    
         $db->bindParam(':program', property_exists($input, 'program') ? $input->program : null);   
         $db->bindParam(':email', property_exists($input, 'email') ? $input->email : null);     
-        //$db->bindParam(':datecreated', $datecreated);
+        $db->bindParam(':datecreated', $datecreated);
         
         $db->execute();
         $id = $db->lastInsertId();
