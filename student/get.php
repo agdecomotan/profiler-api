@@ -27,6 +27,7 @@ try {
         echo json_encode($db->execute());
         //$db->execute()
         $records = $db->fetchAll();
+        echo json_encode($records);
         Http::ReturnSuccess($records);
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
