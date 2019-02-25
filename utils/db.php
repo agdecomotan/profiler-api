@@ -20,9 +20,14 @@ class Db
     }
     public function execute()
     {
-        // Execute statement and return rowcount
+        // Execute statement 
+        return $this->statement->execute();
+    }
+    public function rowcount()
+    {
+        // Get return rowcount
         $this->statement->execute();
-        return $this->statement->rowCount();
+        return $this->statement->fetchColumn();
     }
     public function lastInsertId()
     {
