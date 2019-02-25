@@ -28,11 +28,6 @@ class Db
         // Return last inserted id
         return $this->pdo->lastInsertId();
     }
-    public function rowCount()
-    {
-        // Get row count
-        return $this->statement->rowCount();
-    }
     public function fetchAll()
     {
         // Return all records
