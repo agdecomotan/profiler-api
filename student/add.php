@@ -35,7 +35,7 @@ if (is_null($input)) {
         $db->execute();
         $db->commit();
         $id = $db->lastInsertId();
-        Http::ReturnSuccess(array('message' => 'Object created.', 'id' => $input->id));
+        Http::ReturnSuccess(array('message' => 'Object created.', 'id' => $id));
     } catch (PDOException $pe) {
         Db::ReturnDbError($pe);
     } catch (Exception $e) {
