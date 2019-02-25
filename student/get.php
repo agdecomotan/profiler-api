@@ -24,13 +24,13 @@ try {
     if ($id === 0) {
         $db = new Db('SELECT * FROM `students`'); 
         $db->execute();
-        $record = $db->rowCount();
         $records = $db->fetchAll();
+        $rowCount = count($records);
         // if ($db->rowcount() === 0) {
         //     Http::ReturnError(404, array('message' => 'No records.'));
         // } else {
             // $records = $db->fetchAll();       
-            Http::ReturnSuccess($record);    
+            Http::ReturnSuccess($rowCount);    
             Http::ReturnSuccess($records);
         // }       
     } else {
