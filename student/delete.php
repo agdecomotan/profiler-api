@@ -17,16 +17,19 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $input = json_decode(file_get_contents("php://input"));
 if (is_null($input)) {
-    Http::ReturnError(400, array('message' => 'Message details are empty.'));
+    Http::ReturnError(400, array('message' => 'Object details are empty.'));
 } else {
     try {
-        $db = new Db('SELECT * FROM `messages` WHERE id = :id LIMIT 1');
+        $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
         $db->bindParam(':id', property_exists($input, 'id') ? $input->id : 0);
 
-        if ($db->execute() === 0) {
-            Http::ReturnError(404, array('message' => 'Message not found.'));
+        $db->execute();
+        $records = $db->fetchAll();
+        $rowCount = count($records);
+        if ($rowCount === 0) {
+            Http::ReturnError(404, array('message' => 'Object not found.'));
         } else {
-            $db = new Db('DELETE FROM `messages` WHERE id = :id');
+            $db = new Db('DELETE FROM `students` WHERE id = :id');
             $db->bindParam(':id', property_exists($input, 'id') ? $input->id : 0);
             $db->execute();
             $db->commit();
