@@ -24,12 +24,13 @@ try {
     if ($id === 0) {
         $db = new Db('SELECT * FROM `students`'); 
         $db->execute();
-        if ($db->rowcount() === 0) {
-            Http::ReturnError(404, array('message' => 'No records.'));
-        } else {
-            $records = $db->fetchAll();       
+        $records = $db->fetchAll();
+        // if ($db->rowcount() === 0) {
+        //     Http::ReturnError(404, array('message' => 'No records.'));
+        // } else {
+            // $records = $db->fetchAll();       
             Http::ReturnSuccess($records);
-        }       
+        // }       
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
         $db->bindParam(':id', $id);
