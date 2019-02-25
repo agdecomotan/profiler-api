@@ -26,7 +26,6 @@ class Db
     public function rowcount()
     {
         // Get return rowcount
-        $this->statement->execute();
         return $this->statement->fetchColumn();
     }
     public function lastInsertId()
