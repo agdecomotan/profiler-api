@@ -3,7 +3,6 @@ namespace AGD\Profiler;
 
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/db.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/http.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/models/student.php';
 
 use Exception;
 use PDOException;
@@ -23,21 +22,23 @@ if (array_key_exists('id', $_GET)) {
 
 try {
     if ($id === 0) {
-        $db = new Db('SELECT * FROM `students`');        
-            
-
-        echo json_encode($db->execute());   
-        $records = $db->fetchAll();       
-        Http::ReturnSuccess($records);
+        $db = new Db('SELECT * FROM `students`'); 
+        $db->execute();
+        if ($db->rowcount() === 0) {
+            Http::ReturnError(404, array('message' => 'No records.'));
+        } else {
+            $records = $db->fetchAll();       
+            Http::ReturnSuccess($records);
+        }       
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
         $db->bindParam(':id', $id);
-        if ($db->execute() === 0) {
+        $db->execute();
+        if ($db->rowcount() === 0) {
             Http::ReturnError(404, array('message' => 'Object not found.'));
         } else {
             $record = $db->fetchAll()[0];
-            $value = new Student($record);
-            Http::ReturnSuccess($value);
+            Http::ReturnSuccess($record);
         }
     }
 } catch (PDOException $pe) {
