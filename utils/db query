@@ -1,5 +1,8 @@
 sudo sqlite3​ profiler.db 
 .tables
+.exit
+
+DROP TABLE addresses;
 
 CREATE TABLE students(
 id INTEGER PRIMARY KEY,

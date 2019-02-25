@@ -33,8 +33,8 @@ if (is_null($input)) {
         $db->bindParam(':datecreated', $datecreated);
         
         $db->execute();
-        $id = $db->lastInsertId();
         $db->commit();
+        $id = $db->lastInsertId();
         Http::ReturnSuccess(array('message' => 'Object created.', 'id' => $input->id));
     } catch (PDOException $pe) {
         Db::ReturnDbError($pe);
