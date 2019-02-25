@@ -1,0 +1,32 @@
+sudo sqlite3​ profiler.db 
+.tables
+
+CREATE TABLE students(
+id INTEGER PRIMARY KEY,
+studentNumber TEXT,
+firstName TEXT,
+lastName TEXT,
+yearLevel TEXT,
+program TEXT,
+email TEXT);
+
+INSERT INTO students(
+studentNumber,
+firstName,
+lastName,
+yearLevel,
+program,
+email) VALUES
+('2017-30211',
+'Ane',
+'Decomotan',
+'2nd Year',
+'MIS',
+'agdecomotan@yahoo.com');
+
+-------
+
+
+sudo chmod 775 /var/www/mysite
+sudo chmod 664 /var/www/mysite/sqlite.db
+sudo usermod -a -G pi www-data
