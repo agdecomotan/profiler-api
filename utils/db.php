@@ -28,6 +28,11 @@ class Db
         // Return last inserted id
         return $this->pdo->lastInsertId();
     }
+    public function fetchColumn()
+    {
+        // Get fetch column
+        return $this->statement->fetchColumn();
+    }
     public function fetchAll()
     {
         // Return all records
