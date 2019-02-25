@@ -23,17 +23,6 @@ if (array_key_exists('id', $_GET)) {
 
 try {
     if ($id === 0) {
-        // $db = new Db('SELECT * FROM `students`'); 
-        // $db->execute();
-        // $records = $db->fetchAll();
-        // $rowCount = count($records);
-        // if ($rowCount === 0) {
-        //     Http::ReturnError(404, array('message' => 'No records.'));
-        // } else {      
-        //     Http::ReturnSuccess($records);
-        // }
-
-
         $db = new Db('SELECT * FROM `students`');
         $response = array();
         $db->execute();
@@ -58,7 +47,8 @@ try {
             Http::ReturnError(404, array('message' => 'Object not found.'));
         } else {
             $record = $records[0];
-            Http::ReturnSuccess($record);
+            $value = new Student($record);
+            Http::ReturnSuccess($value);
         }
     }
 } catch (PDOException $pe) {
