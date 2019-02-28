@@ -33,6 +33,7 @@ if (is_null($input)) {
             email = :email
             WHERE id = :id');
 
+            $db->bindParam(':id', property_exists($input, 'id') ? $input->id : 0);
             $db->bindParam(':studentNumber', property_exists($input, 'studentNumber') ? $input->studentNumber : null);
             $db->bindParam(':firstName', property_exists($input, 'firstName') ? $input->firstName : null);
             $db->bindParam(':lastName', property_exists($input, 'lastName') ? $input->lastName : null);
