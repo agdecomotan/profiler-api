@@ -14,6 +14,43 @@ program TEXT,
 email TEXT,
 datecreated TEXT);
 
+CREATE TABLE courses(
+id INTEGER PRIMARY KEY,
+number TEXT,
+title TEXT,
+specialization TEXT,
+credit TEXT,
+active TEXT);
+
+CREATE TABLE grades(
+id INTEGER PRIMARY KEY,
+courseId TEXT,
+studentId TEXT,
+value TEXT,
+term TEXT,
+year TEXT);
+
+CREATE TABLE users(
+id INTEGER PRIMARY KEY,
+firstName TEXT,
+lastName TEXT,
+position TEXT,
+email TEXT,
+username TEXT,
+password TEXT);
+
+CREATE TABLE profiles(
+id INTEGER PRIMARY KEY,
+dateCreated TEXT,
+stageOneDate TEXT,
+stageTwoDate TEXT,
+stageOneResult TEXT,
+stageTwoResult TEXT,
+finalResult TEXT,
+status TEXT,
+studentId TEXT,
+userId TEXT);
+
 INSERT INTO students(
 studentNumber,
 firstName,
