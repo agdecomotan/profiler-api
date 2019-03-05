@@ -23,3 +23,8 @@ https://imjustpureblood.ml/profiler-api/student/get.php
 
 git config credential.helper store
 git push https://github.com/agdecomotan/profiler-api.git
+
+Admin
+-users
+-change password
+-course list
