@@ -21,7 +21,7 @@ if (is_null($input)) {
 } else {
     try {
         $db = new Db('INSERT INTO `users`(firstName, lastName, position, username, email, password) 
-                    VALUES(:studentNumber, :firstName, :lastName, :position, :username, :email, :password)');
+                    VALUES(:firstName, :lastName, :position, :username, :email, :password)');
         
         $db->bindParam(':firstName', property_exists($input, 'firstName') ? $input->firstName : null);
         $db->bindParam(':lastName', property_exists($input, 'lastName') ? $input->lastName : null);
