@@ -33,10 +33,9 @@ try {
                 $value = new User($record);
                 array_push($response, $value);
             }
-            Http::ReturnSuccess($response);
-        } else {      
-            Http::ReturnError(404, array('message' => 'No records.'));
-        }     
+        } 
+
+        Http::ReturnSuccess($response);  
     } else {
         $db = new Db('SELECT * FROM `users` WHERE id = :id LIMIT 1');
         $db->bindParam(':id', $id);
