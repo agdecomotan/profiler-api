@@ -40,18 +40,15 @@ try {
     } else {
         $db = new Db('SELECT * FROM grades g JOIN courses c ON g.id = c.id WHERE g.studentId = :id');
         $db->bindParam(':id', $id);
-        $response = array();
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
-        if ($rowCount > 0) {
-            foreach ($records as &$record) {
-                $value = new Grade($record);
-                array_push($response, $value);
-            }
-            Http::ReturnSuccess($response);
-        } else {      
-            Http::ReturnError(404, array('message' => 'No records.'));
+        if ($rowCount === 0) {
+            Http::ReturnError(404, array('message' => 'Object not found.'));
+        } else {
+            $record = $records[0];
+            $value = new Grade($record);
+            Http::ReturnSuccess($value);
         }
     }
 } catch (PDOException $pe) {
