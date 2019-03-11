@@ -40,8 +40,8 @@ try {
     } else {//select * from grades join courses on grades.id = courses.id
         //WHERE studentId = :id
         //AS grade JOIN `courses` AS course ON grade.id = course.id'
-        $db = new Db('SELECT * FROM grades g JOIN courses c ON g.id = c.id');
-        //$db->bindParam(':id', $id);
+        $db = new Db('SELECT * FROM grades g JOIN courses c ON g.id = c.id WHERE g.studentId = :id');
+        $db->bindParam(':id', $id);
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
