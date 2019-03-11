@@ -39,7 +39,8 @@ try {
         }     
     } else {//select * from grades join courses on grades.id = courses.id
         //WHERE studentId = :id
-        $db = new Db('SELECT * FROM `grades` AS grade JOIN `courses` AS course ON grade.id = course.id');
+        //AS grade JOIN `courses` AS course ON grade.id = course.id'
+        $db = new Db('SELECT * FROM grades WHERE id = :id');
         $db->bindParam(':id', $id);
         $db->execute();
         $records = $db->fetchAll();
