@@ -37,8 +37,9 @@ try {
         } else {      
             Http::ReturnError(404, array('message' => 'No records.'));
         }     
-    } else {
-        $db = new Db('SELECT * FROM `grades` WHERE id = :id LIMIT 1');
+    } else {//select * from grades join courses on grades.id = courses.id
+        //WHERE studentId = :id
+        $db = new Db('SELECT * FROM `grades` JOIN `courses` ON grades.id = courses.id');
         $db->bindParam(':id', $id);
         $db->execute();
         $records = $db->fetchAll();

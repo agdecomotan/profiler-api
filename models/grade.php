@@ -5,6 +5,7 @@ class Grade
     public $id;
     public $courseId;
     public $studentId;
+    public $title;
     public $value;    
     public $term; 
     public $year;
@@ -15,6 +16,7 @@ class Grade
             $this->id = (int) $data['id'] ?? 0;
             $this->courseId = $data['courseId'] ?? null;
             $this->studentId = $data['studentId'] ?? null;
+            $this->title = $data['title'] ?? null;
             $this->value = $data['value'] ?? null;
             $this->term = $data['term'] ?? null;
             $this->year = $data['year'] ?? null;

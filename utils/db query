@@ -16,7 +16,7 @@ datecreated TEXT);
 
 CREATE TABLE courses(
 id INTEGER PRIMARY KEY,
-number TEXT,
+courseNumber TEXT,
 title TEXT,
 specialization TEXT,
 credit TEXT,

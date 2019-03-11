@@ -32,11 +32,9 @@ try {
             foreach ($records as &$record) {
                 $value = new Course($record);
                 array_push($response, $value);
-            }
-            Http::ReturnSuccess($response);
-        } else {      
-            Http::ReturnError(404, array('message' => 'No records.'));
-        }     
+            }            
+        }    
+        Http::ReturnSuccess($response);
     } else {
         $db = new Db('SELECT * FROM `courses` WHERE id = :id LIMIT 1');
         $db->bindParam(':id', $id);
