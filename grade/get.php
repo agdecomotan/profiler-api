@@ -40,6 +40,7 @@ try {
     } else {
         $db = new Db('SELECT * FROM grades g JOIN courses c ON g.id = c.id WHERE g.studentId = :id');
         $db->bindParam(':id', $id);
+        $response = array();
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
@@ -51,7 +52,7 @@ try {
             Http::ReturnSuccess($response);
         } else {      
             Http::ReturnError(404, array('message' => 'No records.'));
-        }       
+        }
     }
 } catch (PDOException $pe) {
     Db::ReturnDbError($pe);
