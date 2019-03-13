@@ -24,7 +24,7 @@ if (is_null($input)) {
         $db = new Db('INSERT INTO `profiles`(dateCreated, stageOneDate, stageTwoDate, stageOneResult, stageTwoResult, finalResult, status, studentId, userId) 
                     VALUES(:dateCreated, :stageOneDate, :stageTwoDate, :stageOneResult, :stageTwoResult, :finalResult, :status, :studentId, :userId)');
         
-        $db->bindParam(':datecreated', $datecreated);
+        $db->bindParam(':dateCreated', $datecreated);
         $db->bindParam(':stageOneDate', property_exists($input, 'stageOneDate') ? $input->stageOneDate : null);
         $db->bindParam(':stageTwoDate', property_exists($input, 'stageTwoDate') ? $input->stageTwoDate : null);
         $db->bindParam(':stageOneResult', property_exists($input, 'stageOneResult') ? $input->stageOneResult : null);    
