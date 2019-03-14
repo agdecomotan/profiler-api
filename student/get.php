@@ -33,23 +33,19 @@ try {
                 $value = new Student($record);
                 array_push($response, $value);
             }
-            Http::ReturnSuccess($response);
-        } else {      
-            Http::ReturnError(404, array('message' => 'No records.'));
-        }     
+        }  
+        Http::ReturnSuccess($response);
     } else {
         $db = new Db('SELECT * FROM `students` WHERE id = :id LIMIT 1');
         $db->bindParam(':id', $id);
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
-        if ($rowCount === 0) {
-            Http::ReturnError(404, array('message' => 'Object not found.'));
-        } else {
+        if ($rowCount > 0) {
             $record = $records[0];
-            $value = new Student($record);
-            Http::ReturnSuccess($value);
+            $value = new Student($record);            
         }
+        Http::ReturnSuccess($value);
     }
 } catch (PDOException $pe) {
     Db::ReturnDbError($pe);

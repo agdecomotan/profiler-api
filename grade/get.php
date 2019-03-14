@@ -33,10 +33,9 @@ try {
                 $value = new Grade($record);
                 array_push($response, $value);
             }
-            Http::ReturnSuccess($response);
-        } else {      
-            Http::ReturnError(404, array('message' => 'No records.'));
-        }     
+        } 
+
+        Http::ReturnSuccess($response);   
     } else {
         $db = new Db('SELECT * FROM grades g JOIN courses c ON g.courseId = c.id WHERE g.studentId = :id');
         $db->bindParam(':id', $id);
@@ -49,10 +48,9 @@ try {
                 $value = new Grade($record);
                 array_push($response, $value);
             }
-            Http::ReturnSuccess($response);
-        } else {      
-            Http::ReturnError(404, array('message' => 'No records.'));
-        }
+        } 
+
+        Http::ReturnSuccess($response);   
     }
 } catch (PDOException $pe) {
     Db::ReturnDbError($pe);

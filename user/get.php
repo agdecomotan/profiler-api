@@ -42,13 +42,11 @@ try {
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
-        if ($rowCount === 0) {
-            Http::ReturnError(404, array('message' => 'Object not found.'));
-        } else {
+        if ($rowCount > 0) {
             $record = $records[0];
             $value = new User($record);
-            Http::ReturnSuccess($value);
         }
+        Http::ReturnSuccess($value);
     }
 } catch (PDOException $pe) {
     Db::ReturnDbError($pe);

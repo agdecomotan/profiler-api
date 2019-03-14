@@ -38,11 +38,10 @@ try {
             foreach ($records as &$record) {
                 $value = new Profile($record);
                 array_push($response, $value);
-            }
-            Http::ReturnSuccess($response);
-        } else {      
-            Http::ReturnError(404, array('message' => 'No records.'));
-        }     
+            }            
+        } 
+
+        Http::ReturnSuccess($response);   
     } elseif ($id === 0) {
         $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id');
         $response = array();
@@ -54,23 +53,20 @@ try {
                 $value = new Profile($record);
                 array_push($response, $value);
             }
-            Http::ReturnSuccess($response);
-        } else {      
-            Http::ReturnError(404, array('message' => 'No records.'));
-        }     
+        } 
+
+        Http::ReturnSuccess($response);    
     } else {
         $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE id = :id LIMIT 1');
         $db->bindParam(':id', $id);
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
-        if ($rowCount === 0) {
-            Http::ReturnError(404, array('message' => 'Object not found.'));
-        } else {
+        if ($rowCount > 0) {            
             $record = $records[0];
-            $value = new Profile($record);
-            Http::ReturnSuccess($value);
+            $value = new Profile($record);            
         }
+        Http::ReturnSuccess($value);
     }
 } catch (PDOException $pe) {
     Db::ReturnDbError($pe);
