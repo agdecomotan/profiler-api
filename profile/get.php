@@ -28,8 +28,9 @@ if (array_key_exists('status', $_GET)) {
 
 try {
      if ($status !== '') {
-        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id');
+        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE status = :status');
         $response = array();
+         $db->bindParam(':status', $status);
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
