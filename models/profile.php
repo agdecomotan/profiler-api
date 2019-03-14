@@ -12,6 +12,8 @@ class Profile
     public $status;
     public $studentId;
     public $userId;
+    public $studentFirstName;
+    public $studentLastName;
 
     public function __construct(array $data)
     {
@@ -26,6 +28,8 @@ class Profile
             $this->status = $data['status'] ?? null;
             $this->studentId = $data['studentId'] ?? null;
             $this->userId = $data['userId'] ?? null;
+            $this->studentFirstName = $data['firstName'] ?? null;
+            $this->studentLastName = $data['lastName'] ?? null;
         }
     }
 }

@@ -23,7 +23,7 @@ if (array_key_exists('id', $_GET)) {
 
 try {
     if ($id === 0) {
-        $db = new Db('SELECT * FROM `profiles`');
+        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id');
         $response = array();
         $db->execute();
         $records = $db->fetchAll();
@@ -38,7 +38,7 @@ try {
             Http::ReturnError(404, array('message' => 'No records.'));
         }     
     } else {
-        $db = new Db('SELECT * FROM `profiles` WHERE id = :id LIMIT 1');
+        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE id = :id LIMIT 1');
         $db->bindParam(':id', $id);
         $db->execute();
         $records = $db->fetchAll();
