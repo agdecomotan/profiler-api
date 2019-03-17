@@ -33,7 +33,9 @@ if (is_null($input)) {
             status = :status, 
             studentId = :studentId, 
             userId = :userId, 
-            exam = :exam, 
+            sdExam = :sdExam, 
+            dsExam = :dsExam, 
+            msExam = :msExam, 
             sdInterview = :sdInterview, 
             msInterview = :msInterview,
             dsInterview = :dsInterview
@@ -48,7 +50,9 @@ if (is_null($input)) {
             $db->bindParam(':status', property_exists($input, 'status') ? $input->status : null);   
             $db->bindParam(':studentId', property_exists($input, 'studentId') ? $input->studentId : null);     
             $db->bindParam(':userId', property_exists($input, 'userId') ? $input->userId : null);         
-            $db->bindParam(':exam', property_exists($input, 'exam') ? $input->exam : null);         
+            $db->bindParam(':sdExam', property_exists($input, 'sdExam') ? $input->sdExam : null);         
+            $db->bindParam(':dsExam', property_exists($input, 'dsExam') ? $input->dsExam : null);            
+            $db->bindParam(':msExam', property_exists($input, 'msExam') ? $input->msExam : null);            
             $db->bindParam(':sdInterview', property_exists($input, 'sdInterview') ? $input->sdInterview : null);         
             $db->bindParam(':msInterview', property_exists($input, 'msInterview') ? $input->msInterview : null);         
             $db->bindParam(':dsInterview', property_exists($input, 'dsInterview') ? $input->dsInterview : null);        

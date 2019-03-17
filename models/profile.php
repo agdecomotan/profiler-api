@@ -11,7 +11,9 @@ class Profile
     public $status;
     public $studentId;
     public $userId;
-    public $exam;
+    public $sdExam;
+    public $dsExam;
+    public $msExam;
     public $sdInterview;
     public $dsInterview;
     public $msInterview;
@@ -30,7 +32,9 @@ class Profile
             $this->status = $data['status'] ?? null;
             $this->studentId = $data['studentId'] ?? null;
             $this->userId = $data['userId'] ?? null;
-            $this->exam = $data['exam'] ?? null;
+            $this->sdExam = $data['sdExam'] ?? null;
+            $this->dsExam = $data['dsExam'] ?? null;
+            $this->msExam = $data['msExam'] ?? null;
             $this->sdInterview = $data['sdInterview'] ?? null;
             $this->dsInterview = $data['dsInterview'] ?? null;
             $this->msInterview = $data['msInterview'] ?? null;
