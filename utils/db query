@@ -42,14 +42,17 @@ password TEXT);
 CREATE TABLE profiles(
 id INTEGER PRIMARY KEY,
 dateCreated TEXT,
-stageOneDate TEXT,
-stageTwoDate TEXT,
-stageOneResult TEXT,
-stageTwoResult TEXT,
+initialDate TEXT,
+finalDate TEXT,
+initialResult TEXT,
 finalResult TEXT,
 status TEXT,
 studentId TEXT,
-userId TEXT);
+userId TEXT,
+exam TEXT,
+sdInterview TEXT,
+dsInterview TEXT,
+msInterview TEXT);
 
 INSERT INTO students(
 studentNumber,

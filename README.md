@@ -28,3 +28,13 @@ Admin
 -users
 -change password
 -course list
+
+-Stage 1
+	Grade
+	Psych
+	>Track
+	>Rank (solo) / Rank (group)
+
+-Stage 2
+	Interview
+	>Rank (solo) / Rank (group)

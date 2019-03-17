@@ -26,26 +26,32 @@ if (is_null($input)) {
             Http::ReturnError(404, array('message' => 'Object not found.'));
         } else {
             $db = new Db('UPDATE `profiles` SET dateCreated = :dateCreated, 
-            stageOneDate = :stageOneDate, 
-            stageTwoDate = :stageTwoDate, 
-            stageOneResult = :stageOneResult, 
-            stageTwoResult = :stageTwoResult, 
+            initialDate = :initialDate, 
+            finalDate = :finalDate, 
+            initialResult = :initialResult, 
             finalResult = :finalResult, 
             status = :status, 
             studentId = :studentId, 
-            userId = :userId
+            userId = :userId, 
+            exam = :exam, 
+            sdInterview = :sdInterview, 
+            msInterview = :msInterview,
+            dsInterview = :dsInterview
             WHERE id = :id');
 
             $db->bindParam(':id', property_exists($input, 'id') ? $input->id : 0);
             $db->bindParam(':dateCreated', property_exists($input, 'dateCreated') ? $input->dateCreated : null);
-            $db->bindParam(':stageOneDate', property_exists($input, 'stageOneDate') ? $input->stageOneDate : null);
-            $db->bindParam(':stageTwoDate', property_exists($input, 'stageTwoDate') ? $input->stageTwoDate : null);
-            $db->bindParam(':stageOneResult', property_exists($input, 'stageOneResult') ? $input->stageOneResult : null);    
-            $db->bindParam(':stageTwoResult', property_exists($input, 'stageTwoResult') ? $input->stageTwoResult : null);   
+            $db->bindParam(':initialDate', property_exists($input, 'initialDate') ? $input->initialDate : null);
+            $db->bindParam(':finalDate', property_exists($input, 'finalDate') ? $input->finalDate : null);
+            $db->bindParam(':initialResult', property_exists($input, 'initialResult') ? $input->initialResult : null);    
             $db->bindParam(':finalResult', property_exists($input, 'finalResult') ? $input->finalResult : null);  
             $db->bindParam(':status', property_exists($input, 'status') ? $input->status : null);   
             $db->bindParam(':studentId', property_exists($input, 'studentId') ? $input->studentId : null);     
-            $db->bindParam(':userId', property_exists($input, 'userId') ? $input->userId : null);        
+            $db->bindParam(':userId', property_exists($input, 'userId') ? $input->userId : null);         
+            $db->bindParam(':exam', property_exists($input, 'exam') ? $input->exam : null);         
+            $db->bindParam(':sdInterview', property_exists($input, 'sdInterview') ? $input->sdInterview : null);         
+            $db->bindParam(':msInterview', property_exists($input, 'msInterview') ? $input->msInterview : null);         
+            $db->bindParam(':dsInterview', property_exists($input, 'dsInterview') ? $input->dsInterview : null);        
        
             $db->execute();     
             $db->commit();
