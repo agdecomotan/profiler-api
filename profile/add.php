@@ -21,8 +21,8 @@ if (is_null($input)) {
     Http::ReturnError(400, array('message' => 'Object details are empty.'));
 } else {
     try {
-        $db = new Db('INSERT INTO `profiles`(dateCreated, initialDate, finalDate, initialResult, finalResult, status, studentId, userId, sdExam, dsExam, msExam, sdInterview, msInterview, dsInterview) 
-                    VALUES(:dateCreated, :initialDate, :finalDate, :initialResult, :finalResult, :status, :studentId, :userId, :sdExam, :dsExam, :msExam, :sdInterview, :msInterview, :dsInterview)');
+        $db = new Db('INSERT INTO `profiles`(dateCreated, initialDate, finalDate, initialResult, finalResult, status, studentId, userId, sdExam, dsExam, msExam, sdInterview, dsInterview, msInterview) 
+                    VALUES(:dateCreated, :initialDate, :finalDate, :initialResult, :finalResult, :status, :studentId, :userId, :sdExam, :dsExam, :msExam, :sdInterview, :dsInterview, :msInterview)');
         
         $db->bindParam(':dateCreated', $datecreated);
         $db->bindParam(':initialDate', property_exists($input, 'initialDate') ? $input->initialDate : null);
@@ -35,9 +35,9 @@ if (is_null($input)) {
         $db->bindParam(':sdExam', property_exists($input, 'sdExam') ? $input->sdExam : null);         
         $db->bindParam(':dsExam', property_exists($input, 'dsExam') ? $input->dsExam : null);         
         $db->bindParam(':msExam', property_exists($input, 'msExam') ? $input->msExam : null);         
-        $db->bindParam(':sdInterview', property_exists($input, 'sdInterview') ? $input->sdInterview : null);         
-        $db->bindParam(':msInterview', property_exists($input, 'msInterview') ? $input->msInterview : null);         
-        $db->bindParam(':dsInterview', property_exists($input, 'dsInterview') ? $input->dsInterview : null);        
+        $db->bindParam(':sdInterview', property_exists($input, 'sdInterview') ? $input->sdInterview : null); 
+        $db->bindParam(':dsInterview', property_exists($input, 'dsInterview') ? $input->dsInterview : null);            
+        $db->bindParam(':msInterview', property_exists($input, 'msInterview') ? $input->msInterview : null);             
        
         
         $db->execute();
