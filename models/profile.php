@@ -23,7 +23,7 @@ class Profile
     public function __construct(array $data)
     {
         if ($data !== null) {
-            $this->id = (int) $data['g.id'] ?? 0;
+            $this->id = (int) $data['id'] ?? 0;
             $this->dateCreated = $data['dateCreated'] ?? null;
             $this->initialDate = $data['initialDate'] ?? null;
             $this->finalDate = $data['finalDate'] ?? null;
