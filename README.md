@@ -38,3 +38,6 @@ Admin
 -Stage 2
 	Interview
 	>Rank (solo) / Rank (group)
+
+Validate
+-student id is already added
