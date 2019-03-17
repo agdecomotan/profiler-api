@@ -53,9 +53,9 @@ if (is_null($input)) {
             $db->bindParam(':sdExam', property_exists($input, 'sdExam') ? $input->sdExam : null);         
             $db->bindParam(':dsExam', property_exists($input, 'dsExam') ? $input->dsExam : null);            
             $db->bindParam(':msExam', property_exists($input, 'msExam') ? $input->msExam : null);            
-            $db->bindParam(':sdInterview', property_exists($input, 'sdInterview') ? $input->sdInterview : null);         
+            $db->bindParam(':sdInterview', property_exists($input, 'sdInterview') ? $input->sdInterview : null);          
+            $db->bindParam(':dsInterview', property_exists($input, 'dsInterview') ? $input->dsInterview : null);       
             $db->bindParam(':msInterview', property_exists($input, 'msInterview') ? $input->msInterview : null);         
-            $db->bindParam(':dsInterview', property_exists($input, 'dsInterview') ? $input->dsInterview : null);        
        
             $db->execute();     
             $db->commit();
