@@ -22,7 +22,7 @@ if (is_null($input)) {
 } else {
     try {
         $db = new Db('INSERT INTO `profiles`(dateCreated, initialDate, finalDate, initialResult, finalResult, status, studentId, userId, sdExam, dsExam, msExam, sdInterview, msInterview, dsInterview) 
-                    VALUES(:dateCreated, :initialDate, :finalDate, :initialResult, :finalResult, :status, :studentId, :userId, :sdExam, :msExam, :sdInterview, :dsExam, :msInterview, :dsInterview)');
+                    VALUES(:dateCreated, :initialDate, :finalDate, :initialResult, :finalResult, :status, :studentId, :userId, :sdExam, :dsExam, :msExam, :sdInterview, :msInterview, :dsInterview)');
         
         $db->bindParam(':dateCreated', $datecreated);
         $db->bindParam(':initialDate', property_exists($input, 'initialDate') ? $input->initialDate : null);

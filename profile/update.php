@@ -37,8 +37,8 @@ if (is_null($input)) {
             dsExam = :dsExam, 
             msExam = :msExam, 
             sdInterview = :sdInterview, 
-            msInterview = :msInterview,
-            dsInterview = :dsInterview
+            dsInterview = :dsInterview,
+            msInterview = :msInterview
             WHERE id = :id');
 
             $db->bindParam(':id', property_exists($input, 'id') ? $input->id : 0);
