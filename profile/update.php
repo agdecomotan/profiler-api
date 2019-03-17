@@ -19,8 +19,8 @@ if (is_null($input)) {
     Http::ReturnError(400, array('message' => 'Object details are empty.'));
 } else {
     try {
-        $db = new Db('SELECT * FROM `profiles` WHERE id = :id LIMIT 1');     
-        $db->bindParam(':id', property_exists($input, 'id') ? $input->id : 0);
+        $db = new Db('SELECT * FROM `profiles` WHERE studentId = :studentId LIMIT 1');     
+        $db->bindParam(':studentId', property_exists($input, 'studentId') ? $input->studentId : 0);
 
         if ($db->execute() === 0) {
             Http::ReturnError(404, array('message' => 'Object not found.'));
@@ -39,9 +39,8 @@ if (is_null($input)) {
             sdInterview = :sdInterview, 
             dsInterview = :dsInterview,
             msInterview = :msInterview
-            WHERE id = :id');
+            WHERE studentId = :studentId');
 
-            $db->bindParam(':id', property_exists($input, 'id') ? $input->id : 0);
             $db->bindParam(':dateCreated', property_exists($input, 'dateCreated') ? $input->dateCreated : null);
             $db->bindParam(':initialDate', property_exists($input, 'initialDate') ? $input->initialDate : null);
             $db->bindParam(':finalDate', property_exists($input, 'finalDate') ? $input->finalDate : null);
@@ -60,7 +59,7 @@ if (is_null($input)) {
             $db->execute();     
             $db->commit();
     
-            Http::ReturnSuccess(array('message' => 'Object updated.', 'id' => $input->id));
+            Http::ReturnSuccess(array('message' => 'Object updated.', 'id' => $input->studentId));
         }
     } catch (PDOException $pe) {
         Db::ReturnDbError($pe);
