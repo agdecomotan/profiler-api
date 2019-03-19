@@ -41,3 +41,23 @@ Admin
 
 Validate
 -student id is already added
+-profile already added
+
+Email
+Profile Initial
+Profile Final
+Validation
+API Course track by result and date
+Login
+
+
+400.25
+Joy 19
+
+435
+
+
+Sort
+Tab fix layout
+
+
