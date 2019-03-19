@@ -9,6 +9,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/PHPMailer/src/Exception
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/PHPMailer/src/PHPMailer.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/PHPMailer/src/SMTP.php';  
 
+
+Http::SetDefaultHeaders('GET');
+
 $id = '';
 if (array_key_exists('id', $_GET)) {
     $id = $_GET['id'];
