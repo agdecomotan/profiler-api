@@ -57,7 +57,7 @@ try {
 
         Http::ReturnSuccess($response);    
     } else {
-        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE g.id = :id LIMIT 1');
+        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE g.studentId = :id LIMIT 1');
         $db->bindParam(':id', $id);
         $db->execute();
         $records = $db->fetchAll();

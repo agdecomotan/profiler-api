@@ -19,6 +19,8 @@ class Profile
     public $msInterview;
     public $studentFirstName;
     public $studentLastName;
+    public $email;
+
 
     public function __construct(array $data)
     {
@@ -40,6 +42,7 @@ class Profile
             $this->msInterview = $data['msInterview'] ?? null;
             $this->studentFirstName = $data['firstName'] ?? null;
             $this->studentLastName = $data['lastName'] ?? null;
+            $this->email = $data['email'] ?? null;
         }
     }
 }
