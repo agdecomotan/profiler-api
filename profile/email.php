@@ -28,7 +28,7 @@ try {
 	    $record = $records[0];
 	    $value = new Profile($record);            
 	}
-	Http::ReturnSuccess($value);
+	Http::ReturnSuccess($value.email);
 
   	$mail = new PHPMailer(true);
   	$mail->isSMTP();  
@@ -40,7 +40,7 @@ try {
   	$mail->Username = "agdecomotan@up.edu.ph"; 
   	$mail->Password = "fnggtebfexgawxyg"; 
   	$mail->setFrom($mail->Username); 
-  	$mail->addAddress($value["email"]); 
+  	$mail->addAddress("agdecomotan@yahoo.com"); 
   	$mail->Subject = 'Your Account Registration';   	
   	$message = '<p>Dear ,</p><p>Thank you for registering to my website. Have a great day!</p>'; 
   	$mail->msgHTML($message); 
