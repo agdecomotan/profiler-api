@@ -19,20 +19,16 @@ if (array_key_exists('id', $_GET)) {
 }
 
 try {  
-	$db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE g.studentId in (:id)');
-    $response = array();
+	$db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE g.id = :id LIMIT 1');
 	$db->bindParam(':id', $id);
 	$db->execute();
 	$records = $db->fetchAll();
 	$rowCount = count($records);
-	if ($rowCount > 0) {
-		foreach ($records as &$record) {
-		    $value = new Profile($record);
-		    array_push($response, $value);
-		}            
-	} 
-
-	Http::ReturnSuccess($response);   
+	if ($rowCount > 0) {            
+	    $record = $records[0];
+	    $value = new Profile($record);            
+	}
+	Http::ReturnSuccess($value);
 
   	$mail = new PHPMailer(true);
   	$mail->isSMTP();  
