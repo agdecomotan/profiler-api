@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 
 $id = 0;
 $status = '';
+$result = '';
 
 if (array_key_exists('id', $_GET)) {
     $id = intval($_GET['id']);
@@ -26,8 +27,27 @@ if (array_key_exists('status', $_GET)) {
     $status = $_GET['status'];
 }
 
+if (array_key_exists('result', $_GET)) {
+    $result = $_GET['result'];
+}
+
 try {
-     if ($status !== '') {
+    if ($result !== '') {
+        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE finalResult = :result');
+        $response = array();
+         $db->bindParam(':result', $result);
+        $db->execute();
+        $records = $db->fetchAll();
+        $rowCount = count($records);
+        if ($rowCount > 0) {
+            foreach ($records as &$record) {
+                $value = new Profile($record);
+                array_push($response, $value);
+            }            
+        } 
+
+        Http::ReturnSuccess($response);   
+    } elseif ($status !== '') {
         $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE status = :status');
         $response = array();
          $db->bindParam(':status', $status);
