@@ -3,6 +3,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/db.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/http.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/models/profile.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/PHPMailer/src/Exception.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/PHPMailer/src/PHPMailer.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/PHPMailer/src/SMTP.php';  
