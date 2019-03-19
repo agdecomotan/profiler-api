@@ -13,7 +13,7 @@ if (array_key_exists('id', $_GET)) {
 }
 
 try {        
-	$db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE g.studentId in (:id)');
+	$db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE g.studentId in (33, 34)');
     $response = array();
 	$db->bindParam(':id', $id);
 	$db->execute();
