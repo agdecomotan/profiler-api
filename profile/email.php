@@ -12,34 +12,28 @@ require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/PHPMailer/src/SMTP.php'
 
 
 Http::SetDefaultHeaders('GET');
-$db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id');
-$response = array();
-$db->execute();
-$records = $db->fetchAll();
-$rowCount = count($records);
-if ($rowCount > 0) {
-    foreach ($records as &$record) {
-        $value = new Profile($record);
-        array_push($response, $value);
-    }
-} 
+$id = '';
 
-Http::ReturnSuccess($response);    
+if (array_key_exists('id', $_GET)) {
+    $id = $_GET['id'];
+}
 
 try {  
 	//WHERE g.studentId in (33, 34)      
-	// $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id');
- //    $response = array();
-	// //$db->bindParam(':id', $id);
-	// $db->execute();
-	// $records = $db->fetchAll();
-	// $rowCount = count($records);
-	// if ($rowCount > 0) {
-	// 	foreach ($records as &$record) {
-	// 	    $value = new Profile($record);
-	// 	    array_push($response, $value);
-	// 	}            
-	// } 
+	$db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE g.studentId in (33, 34)');
+    $response = array();
+	//$db->bindParam(':id', $id);
+	$db->execute();
+	$records = $db->fetchAll();
+	$rowCount = count($records);
+	if ($rowCount > 0) {
+		foreach ($records as &$record) {
+		    $value = new Profile($record);
+		    array_push($response, $value);
+		}            
+	} 
+
+	Http::ReturnSuccess($response);   
 
   	$mail = new PHPMailer(true);
   	$mail->isSMTP();  
