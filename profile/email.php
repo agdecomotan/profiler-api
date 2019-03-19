@@ -40,9 +40,9 @@ try {
   	$mail->Username = "agdecomotan@up.edu.ph"; 
   	$mail->Password = "fnggtebfexgawxyg"; 
   	$mail->setFrom($mail->Username); 
-  	$mail->addAddress($value.email); 
+  	$mail->addAddress($value["email"]); 
   	$mail->Subject = 'Your Account Registration';   	
-  	$message = '<p>Dear '.$value.studentFirstName.',</p><p>Thank you for registering to my website. Have a great day!</p>'; 
+  	$message = '<p>Dear ,</p><p>Thank you for registering to my website. Have a great day!</p>'; 
   	$mail->msgHTML($message); 
   	$mail->AltBody = strip_tags($message); 
   	if(!$mail->send())
