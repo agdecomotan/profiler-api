@@ -22,7 +22,7 @@ if (is_null($input)) {
 } else {
     try {
         $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE g.studentId = :studentId LIMIT 1');
-        $db->bindParam(':studentId', $studentId);
+        $db->bindParam(':studentId', $input->studentId);
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
