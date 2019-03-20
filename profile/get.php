@@ -31,11 +31,16 @@ if (array_key_exists('result', $_GET)) {
     $result = $_GET['result'];
 }
 
+if (array_key_exists('finalDate', $_GET)) {
+    $finalDate = $_GET['finalDate'];
+}
+
 try {
-    if ($result !== '') {
-        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE finalResult = :result');
+    if ($result !== '' &&  $finalDate !== '') {
+        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE finalResult = :result AND dateCreated =:finalDate');
         $response = array();
-         $db->bindParam(':result', $result);
+        $db->bindParam(':result', $result);
+        $db->bindParam(':finalDate', $finalDate);
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
