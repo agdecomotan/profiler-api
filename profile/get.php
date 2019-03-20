@@ -37,10 +37,10 @@ if (array_key_exists('finalDate', $_GET)) {
 
 try {
     if ($result !== '' &&  $finalDate !== '') {
-        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE finalResult = :result AND finalDate LIKE `%:finalDate%`');
+        $db = new Db('SELECT * FROM profiles g JOIN students c ON g.studentId = c.id WHERE finalResult = :result AND finalDate LIKE :finalDate');
         $response = array();
         $db->bindParam(':result', $result);
-        $db->bindParam(':finalDate', $finalDate);
+        $db->bindParam(':finalDate', '%' . $finalDate . '%')
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
