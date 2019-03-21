@@ -17,17 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $input = json_decode(file_get_contents("php://input"));
 $datecreated = date('Y-m-d H:i:s');
 
-$studentNumber = '';
-if (array_key_exists('studentNumber', $_GET)) {
-    $studentNumber = $_GET['studentNumber'];
-}
-
 if (is_null($input)) {
     Http::ReturnError(400, array('message' => 'Object details are empty.'));
 } else {
     try {        
         $db = new Db('SELECT * FROM `students` WHERE studentNumber = :studentNumber LIMIT 1');
-        $db->bindParam(':studentNumber', $studentNumber);
+        $db->bindParam(':studentNumber', $input->studentNumber);
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
