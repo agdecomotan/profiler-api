@@ -41,7 +41,7 @@ try {
   	$mail->Password = "fnggtebfexgawxyg"; 
   	$mail->setFrom($mail->Username); 
   	$mail->addAddress($value->email); 
-  	$mail->Subject = 'Your Account Registration';   	
+  	$mail->Subject = 'Track Profiling Result';   	
   	$message = '<p>Dear '.$value->studentFirstName.',</p><p>Here is the result of the track profiling: '.$value->finalResult.'</p>'; 
   	$mail->msgHTML($message); 
   	$mail->AltBody = strip_tags($message); 
