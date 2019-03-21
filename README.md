@@ -39,15 +39,12 @@ Admin
 	Interview
 	>Rank (solo) / Rank (group)
 
-Validate
--student id is already added
--profile already added
 
-Email
+
+
 Profile Initial
 Profile Final
 Validation
-API Course track by result and date
 Login
 
 
