@@ -16,15 +16,33 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 }
 
 $id = 0;
+$status = '';
 
 if (array_key_exists('id', $_GET)) {
     $id = intval($_GET['id']);
 }
 
+if (array_key_exists('status', $_GET)) {
+    $status = intval($_GET['status']);
+}
+
 try {
-    if ($id === 0) {
+    if ($status !== '') {
         $db = new Db('SELECT * FROM `courses` WHERE active = :active');
-        $db->bindParam(':active', 'true');
+        $db->bindParam(':active', $status);
+        $response = array();
+        $db->execute();
+        $records = $db->fetchAll();
+        $rowCount = count($records);
+        if ($rowCount > 0) {
+            foreach ($records as &$record) {
+                $value = new Course($record);
+                array_push($response, $value);
+            }            
+        }    
+        Http::ReturnSuccess($response);
+    } elseif ($id === 0) {
+        $db = new Db('SELECT * FROM `courses`');
         $response = array();
         $db->execute();
         $records = $db->fetchAll();
