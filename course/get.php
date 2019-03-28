@@ -23,7 +23,7 @@ if (array_key_exists('id', $_GET)) {
 }
 
 if (array_key_exists('status', $_GET)) {
-    $status = intval($_GET['status']);
+    $status = $_GET['status'];
 }
 
 try {
