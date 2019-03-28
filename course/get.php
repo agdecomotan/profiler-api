@@ -23,7 +23,8 @@ if (array_key_exists('id', $_GET)) {
 
 try {
     if ($id === 0) {
-        $db = new Db('SELECT * FROM `courses` WHERE active = `true`');
+        $db = new Db('SELECT * FROM `courses` WHERE active = :active');
+        $db->bindParam(':active', 'true');
         $response = array();
         $db->execute();
         $records = $db->fetchAll();
