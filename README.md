@@ -45,16 +45,7 @@ Admin
 Profile Initial
 Profile Final
 Validation
-Login
-
-
-400.25
-Joy 19
-
-435
-
+Add user status
 
 Sort
 Tab fix layout
-
-
