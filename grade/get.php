@@ -16,13 +16,34 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 }
 
 $id = 0;
+$specialization = '';
 
 if (array_key_exists('id', $_GET)) {
     $id = intval($_GET['id']);
 }
 
+if (array_key_exists('specialization', $_GET)) {
+    $specialization = $_GET['specialization'];
+}
+
 try {
-    if ($id === 0) {
+    if ($specialization !== ''){
+        $db = new Db('SELECT * FROM grades g JOIN courses c ON g.courseId = c.id WHERE g.studentId = :id AND c.specialization = :specialization');
+        $db->bindParam(':specialization', $specialization);
+        $db->bindParam(':id', $id);
+        $response = array();
+        $db->execute();
+        $records = $db->fetchAll();
+        $rowCount = count($records);
+        if ($rowCount > 0) {
+            foreach ($records as &$record) {
+                $value = new Grade($record);
+                array_push($response, $value);
+            }
+        } 
+
+        Http::ReturnSuccess($response);   
+    } elseif ($id === 0) {
         $db = new Db('SELECT * FROM `grades`');
         $response = array();
         $db->execute();
