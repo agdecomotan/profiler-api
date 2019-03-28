@@ -44,7 +44,7 @@ try {
 
         Http::ReturnSuccess($response);   
     } elseif ($id === 0) {
-        $db = new Db('SELECT * FROM `grades`');
+        $db = new Db('SELECT * FROM grades g JOIN courses c ON g.courseId = c.id');
         $response = array();
         $db->execute();
         $records = $db->fetchAll();
