@@ -9,6 +9,7 @@ class Grade
     public $value;    
     public $term; 
     public $year;
+    public $courseSpecialization;
 
     public function __construct(array $data)
     {
@@ -20,6 +21,7 @@ class Grade
             $this->value = $data['value'] ?? null;
             $this->term = $data['term'] ?? null;
             $this->year = $data['year'] ?? null;
+            $this->courseSpecialization = $data['specialization'] ?? null;
         }
     }
 }
