@@ -28,8 +28,15 @@ if (is_null($input)) {
             $db = new Db('UPDATE `profiles` SET dateCreated = :dateCreated, 
             initialDate = :initialDate, 
             finalDate = :finalDate, 
-            initialResult = :initialResult, 
+            initialResultRank = :initialResultRank,
+            initialResult1 = :initialResult1,
+            initialResult2 = :initialResult2,
+            initialResult3 = :initialResult3, 
+            finalResultRank = :finalResultRank, 
             finalResult = :finalResult, 
+            finalResult1 = :finalResult1, 
+            finalResult2 = :finalResult2, 
+            finalResult3 = :finalResult3, 
             status = :status, 
             studentId = :studentId, 
             userId = :userId, 
@@ -44,8 +51,15 @@ if (is_null($input)) {
             $db->bindParam(':dateCreated', property_exists($input, 'dateCreated') ? $input->dateCreated : null);
             $db->bindParam(':initialDate', property_exists($input, 'initialDate') ? $input->initialDate : null);
             $db->bindParam(':finalDate', property_exists($input, 'finalDate') ? $input->finalDate : null);
-            $db->bindParam(':initialResult', property_exists($input, 'initialResult') ? $input->initialResult : null);    
-            $db->bindParam(':finalResult', property_exists($input, 'finalResult') ? $input->finalResult : null);  
+            $db->bindParam(':initialResultRank', property_exists($input, 'initialResultRank') ? $input->initialResultRank : null);
+            $db->bindParam(':initialResult1', property_exists($input, 'initialResult1') ? $input->initialResult1 : null);
+            $db->bindParam(':initialResult2', property_exists($input, 'initialResult2') ? $input->initialResult2 : null);
+            $db->bindParam(':initialResult3', property_exists($input, 'initialResult3') ? $input->initialResult3 : null);    
+            $db->bindParam(':finalResultRank', property_exists($input, 'finalResultRank') ? $input->finalResultRank : null);  
+            $db->bindParam(':finalResult', property_exists($input, 'finalResult') ? $input->finalResult : null);
+            $db->bindParam(':finalResult1', property_exists($input, 'finalResult1') ? $input->finalResult1 : null);
+            $db->bindParam(':finalResult2', property_exists($input, 'finalResult2') ? $input->finalResult2 : null);
+            $db->bindParam(':finalResult3', property_exists($input, 'finalResult3') ? $input->finalResult3 : null);
             $db->bindParam(':status', property_exists($input, 'status') ? $input->status : null);   
             $db->bindParam(':studentId', property_exists($input, 'studentId') ? $input->studentId : null);     
             $db->bindParam(':userId', property_exists($input, 'userId') ? $input->userId : null);         
