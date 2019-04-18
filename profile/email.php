@@ -54,7 +54,7 @@ try {
   	$mail->setFrom($mail->Username); 
   	$mail->addAddress($value->email); 
   	$mail->Subject = 'Track Profiling Result';   	
-  	$message = '<p>Dear '.$value->studentFirstName.',</p><p>Here is the result of the track profiling: '.$trackTitle.'.</p>'; 
+  	$message = '<p>Dear '.$value->studentFirstName.',</p><p>Here is the result of the track profiling: '.$trackTitle.'.</p><br/><p>Regards,</p><p>CICT, West Visayas State University</p>'; 
   	$mail->msgHTML($message); 
   	$mail->AltBody = strip_tags($message); 
   	if(!$mail->send())
