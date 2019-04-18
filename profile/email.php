@@ -30,6 +30,15 @@ try {
   	}
     $trackValue = json_decode($value->finalResult1, true);
     $trackResult = $trackValue['result'];
+    $trackTitle = '';
+
+    if($trackResult === 'SD'){
+      $trackTitle = 'Software Development';
+    } else if($trackResult === 'DS'){
+      $trackTitle = 'Distributed Systems';
+    } else if($trackResult === 'MS'){
+      $trackTitle = 'Multimedia Studies';
+    } 
 
   	Http::ReturnSuccess($value);
 
@@ -45,7 +54,7 @@ try {
   	$mail->setFrom($mail->Username); 
   	$mail->addAddress($value->email); 
   	$mail->Subject = 'Track Profiling Result';   	
-  	$message = '<p>Dear '.$value->studentFirstName.',</p><p>Here is the result of the track profiling: '.$trackResult.'</p>'; 
+  	$message = '<p>Dear '.$value->studentFirstName.',</p><p>Here is the result of the track profiling: '.$trackTitle.'.</p>'; 
   	$mail->msgHTML($message); 
   	$mail->AltBody = strip_tags($message); 
   	if(!$mail->send())
