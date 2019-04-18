@@ -33,7 +33,7 @@ if (is_null($input)) {
             initialResult2 = :initialResult2,
             initialResult3 = :initialResult3, 
             finalResultRank = :finalResultRank, 
-            finalResult = :finalResult, 
+            studentChoice = :studentChoice, 
             finalResult1 = :finalResult1, 
             finalResult2 = :finalResult2, 
             finalResult3 = :finalResult3, 
@@ -56,7 +56,7 @@ if (is_null($input)) {
             $db->bindParam(':initialResult2', property_exists($input, 'initialResult2') ? $input->initialResult2 : null);
             $db->bindParam(':initialResult3', property_exists($input, 'initialResult3') ? $input->initialResult3 : null);    
             $db->bindParam(':finalResultRank', property_exists($input, 'finalResultRank') ? $input->finalResultRank : null);  
-            $db->bindParam(':finalResult', property_exists($input, 'finalResult') ? $input->finalResult : null);
+            $db->bindParam(':studentChoice', property_exists($input, 'studentChoice') ? $input->studentChoice : null);
             $db->bindParam(':finalResult1', property_exists($input, 'finalResult1') ? $input->finalResult1 : null);
             $db->bindParam(':finalResult2', property_exists($input, 'finalResult2') ? $input->finalResult2 : null);
             $db->bindParam(':finalResult3', property_exists($input, 'finalResult3') ? $input->finalResult3 : null);

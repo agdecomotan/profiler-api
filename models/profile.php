@@ -11,7 +11,7 @@ class Profile
     public $initialResult2; 
     public $initialResult3; 
     public $finalResultRank;
-    public $finalResult;
+    public $studentChoice;
     public $finalResult1;
     public $finalResult2;
     public $finalResult3;
@@ -42,7 +42,7 @@ class Profile
             $this->initialResult2 = $data['initialResult2'] ?? null;
             $this->initialResult3 = $data['initialResult3'] ?? null;
             $this->finalResultRank = $data['finalResultRank'] ?? null;
-            $this->finalResult = $data['finalResult'] ?? null;
+            $this->studentChoice = $data['studentChoice'] ?? null;
             $this->finalResult1 = $data['finalResult1'] ?? null;
             $this->finalResult2 = $data['finalResult2'] ?? null;
             $this->finalResult3 = $data['finalResult3'] ?? null;
