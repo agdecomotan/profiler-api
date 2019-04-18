@@ -63,6 +63,17 @@ sdInterview TEXT,
 dsInterview TEXT,
 msInterview TEXT);
 
+CREATE TABLE settings(
+id INTEGER PRIMARY KEY,
+name TEXT,
+value TEXT);
+
+INSERT INTO settings(
+name,
+value) VALUES
+('quota',
+'');
+
 INSERT INTO students(
 studentNumber,
 firstName,
