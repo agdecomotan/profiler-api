@@ -30,7 +30,7 @@ try {
         $rowCount = count($records);
         if ($rowCount > 0) {
             foreach ($records as &$record) {
-                $value = new Student($record);
+                $value = new Setting($record);
                 array_push($response, $value);
             }
         }  
@@ -43,7 +43,7 @@ try {
         $rowCount = count($records);
         if ($rowCount > 0) {
             $record = $records[0];
-            $value = new Student($record);            
+            $value = new Setting($record);            
         }
         Http::ReturnSuccess($value);
     }
