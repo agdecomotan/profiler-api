@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 
 $id = 0;
 
-if (array_key_exists('id', $_GET)) {
-    $id = intval($_GET['id']);
+if (array_key_exists('name', $_GET)) {
+    $id = $_GET['name'];
 }
 
 try {
@@ -36,8 +36,8 @@ try {
         }  
         Http::ReturnSuccess($response);
     } else {
-        $db = new Db('SELECT * FROM `settings` WHERE id = :id LIMIT 1');
-        $db->bindParam(':id', $id);
+        $db = new Db('SELECT * FROM `settings` WHERE name = :name LIMIT 1');
+        $db->bindParam(':name', $name);
         $db->execute();
         $records = $db->fetchAll();
         $rowCount = count($records);
