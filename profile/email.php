@@ -28,6 +28,9 @@ try {
   	    $record = $records[0];
   	    $value = new Profile($record);            
   	}
+    $trackValue = json_decode($value->finalResult1, true);
+    $trackResult = $trackValue['result'];
+
   	Http::ReturnSuccess($value);
 
   	$mail = new PHPMailer(true);
@@ -42,7 +45,7 @@ try {
   	$mail->setFrom($mail->Username); 
   	$mail->addAddress($value->email); 
   	$mail->Subject = 'Track Profiling Result';   	
-  	$message = '<p>Dear '.$value->studentFirstName.',</p><p>Here is the result of the track profiling: '.$value->finalResult1.'</p>'; 
+  	$message = '<p>Dear '.$value->studentFirstName.',</p><p>Here is the result of the track profiling: '.$trackResult.'</p>'; 
   	$mail->msgHTML($message); 
   	$mail->AltBody = strip_tags($message); 
   	if(!$mail->send())
