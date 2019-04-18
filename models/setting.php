@@ -1,5 +1,4 @@
 <?php
-<?php
 namespace AGD\Profiler;
 class Setting
 {
