@@ -28,6 +28,7 @@ class Profile
     public $studentLastName;
     public $email;
     public $studentNumber;
+    public $gender;
 
 
     public function __construct(array $data)
@@ -59,6 +60,7 @@ class Profile
             $this->studentLastName = $data['lastName'] ?? null;
             $this->email = $data['email'] ?? null;        
             $this->studentNumber = $data['studentNumber'] ?? null;
+            $this->gender = $data['gender'] ?? null;
         }
     }
 }

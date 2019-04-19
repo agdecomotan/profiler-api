@@ -10,6 +10,7 @@ studentNumber TEXT,
 firstName TEXT,
 lastName TEXT,
 yearLevel TEXT,
+gender TEXT,
 program TEXT,
 email TEXT,
 datecreated TEXT);

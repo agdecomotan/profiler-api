@@ -29,6 +29,7 @@ if (is_null($input)) {
             firstName = :firstName, 
             lastName = :lastName, 
             yearLevel = :yearLevel, 
+            gender = :gender,
             program = :program, 
             email = :email
             WHERE id = :id');
@@ -38,6 +39,7 @@ if (is_null($input)) {
             $db->bindParam(':firstName', property_exists($input, 'firstName') ? $input->firstName : null);
             $db->bindParam(':lastName', property_exists($input, 'lastName') ? $input->lastName : null);
             $db->bindParam(':yearLevel', property_exists($input, 'yearLevel') ? $input->yearLevel : null);    
+            $db->bindParam(':gender', property_exists($input, 'gender') ? $input->gender : null); 
             $db->bindParam(':program', property_exists($input, 'program') ? $input->program : null);   
             $db->bindParam(':email', property_exists($input, 'email') ? $input->email : null);     
        

@@ -27,13 +27,14 @@ if (is_null($input)) {
         $records = $db->fetchAll();
         $rowCount = count($records);
         if ($rowCount === 0) { 
-            $db = new Db('INSERT INTO `students`(studentNumber, firstName, lastName, yearLevel, program, email, datecreated) 
-                        VALUES(:studentNumber, :firstName, :lastName, :yearLevel, :program, :email, :datecreated)');
+            $db = new Db('INSERT INTO `students`(studentNumber, firstName, lastName, yearLevel, gender, program, email, datecreated) 
+                        VALUES(:studentNumber, :firstName, :lastName, :yearLevel, :gender, :program, :email, :datecreated)');
             
             $db->bindParam(':studentNumber', property_exists($input, 'studentNumber') ? $input->studentNumber : null);
             $db->bindParam(':firstName', property_exists($input, 'firstName') ? $input->firstName : null);
-            $db->bindParam(':lastName', property_exists($input, 'lastName') ? $input->lastName : null);
-            $db->bindParam(':yearLevel', property_exists($input, 'yearLevel') ? $input->yearLevel : null);    
+            $db->bindParam(':lastName', property_exists($input, 'lastName') ? $input->lastName : null); 
+            $db->bindParam(':yearLevel', property_exists($input, 'yearLevel') ? $input->yearLevel : null);   
+            $db->bindParam(':gender', property_exists($input, 'gender') ? $input->gender : null);   
             $db->bindParam(':program', property_exists($input, 'program') ? $input->program : null);   
             $db->bindParam(':email', property_exists($input, 'email') ? $input->email : null);     
             $db->bindParam(':datecreated', $datecreated);
