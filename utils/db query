@@ -72,7 +72,7 @@ value TEXT);
 INSERT INTO settings(
 name,
 value) VALUES
-('quota',
+('lettersign',
 '');
 
 INSERT INTO students(
