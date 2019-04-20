@@ -27,8 +27,8 @@ if (is_null($input)) {
         $records = $db->fetchAll();
         $rowCount = count($records);
         if ($rowCount === 0) { 
-            $db = new Db('INSERT INTO `profiles`(dateCreated, initialDate, finalDate, initialResultRank, initialResult1, initialResult2, initialResult3, finalResultRank, studentChoice, finalResult1, finalResult2, finalResult3, status, studentId, userId, sdExam, dsExam, msExam, sdInterview, dsInterview, msInterview) 
-                        VALUES(:dateCreated, :initialDate, :finalDate, :initialResultRank, :initialResult1, :initialResult2, :initialResult3, :finalResultRank, :studentChoice, :finalResult1, :finalResult2, :finalResult3, :status, :studentId, :userId, :sdExam, :dsExam, :msExam, :sdInterview, :dsInterview, :msInterview)');
+            $db = new Db('INSERT INTO `profiles`(dateCreated, initialDate, finalDate, initialResultRank, initialResult1, initialResult2, initialResult3, finalResultRank, studentChoice, finalResult1, finalResult2, finalResult3, status, studentId, userId, sdExam, dsExam, msExam, sdInterview, dsInterview, msInterview, accepted) 
+                        VALUES(:dateCreated, :initialDate, :finalDate, :initialResultRank, :initialResult1, :initialResult2, :initialResult3, :finalResultRank, :studentChoice, :finalResult1, :finalResult2, :finalResult3, :status, :studentId, :userId, :sdExam, :dsExam, :msExam, :sdInterview, :dsInterview, :msInterview, :accepted)');
             
             $db->bindParam(':dateCreated', $datecreated);
             $db->bindParam(':initialDate', property_exists($input, 'initialDate') ? $input->initialDate : null);
@@ -50,7 +50,8 @@ if (is_null($input)) {
             $db->bindParam(':msExam', property_exists($input, 'msExam') ? $input->msExam : null);         
             $db->bindParam(':sdInterview', property_exists($input, 'sdInterview') ? $input->sdInterview : null); 
             $db->bindParam(':dsInterview', property_exists($input, 'dsInterview') ? $input->dsInterview : null);            
-            $db->bindParam(':msInterview', property_exists($input, 'msInterview') ? $input->msInterview : null);             
+            $db->bindParam(':msInterview', property_exists($input, 'msInterview') ? $input->msInterview : null);            
+            $db->bindParam(':accepted', property_exists($input, 'accepted') ? $input->accepted : null);            
            
             
             $db->execute();

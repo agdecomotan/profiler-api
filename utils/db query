@@ -62,7 +62,8 @@ dsExam TEXT,
 msExam TEXT,
 sdInterview TEXT,
 dsInterview TEXT,
-msInterview TEXT);
+msInterview TEXT,
+accepted TEXT);
 
 CREATE TABLE settings(
 id INTEGER PRIMARY KEY,
@@ -75,6 +76,12 @@ value) VALUES
 ('lettersign',
 '');
 
+INSERT INTO settings(
+name,
+value) VALUES
+('quota',
+'0');
+
 INSERT INTO students(
 studentNumber,
 firstName,
@@ -82,12 +89,88 @@ lastName,
 yearLevel,
 program,
 email) VALUES
-('2017-30211',
-'Ane',
-'Decomotan',
-'2nd Year',
-'MIS',
+('2008-0009',
+'Jo Ryan',
+'Basco',
+'2',
+'BSIT',
 'agdecomotan@yahoo.com');
+
+INSERT INTO grades(
+courseId,
+studentId,
+value,
+term,
+year) VALUES
+('1',
+'6',
+'1.75',
+'1ST',
+'2015');
+
+INSERT INTO grades(
+courseId,
+studentId,
+value,
+term,
+year) VALUES
+('2',
+'6',
+'2',
+'1ST',
+'2015');
+
+INSERT INTO grades(
+courseId,
+studentId,
+value,
+term,
+year) VALUES
+('3',
+'6',
+'1.5',
+'1ST',
+'2015');
+
+INSERT INTO grades(
+courseId,
+studentId,
+value,
+term,
+year) VALUES
+('4',
+'6',
+'1',
+'1ST',
+'2015');
+
+INSERT INTO grades(
+courseId,
+studentId,
+value,
+term,
+year) VALUES
+('5',
+'6',
+'1.25',
+'1ST',
+'2015');
+
+INSERT INTO grades(
+courseId,
+studentId,
+value,
+term,
+year) VALUES
+('6',
+'6',
+'1.5',
+'1ST',
+'2015');
+
+UPDATE students
+SET gender = 'M' 
+WHERE id = 5;
 
 -------
 

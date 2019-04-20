@@ -45,7 +45,8 @@ if (is_null($input)) {
             msExam = :msExam, 
             sdInterview = :sdInterview, 
             dsInterview = :dsInterview,
-            msInterview = :msInterview
+            msInterview = :msInterview,
+            accepted = :accepted
             WHERE studentId = :studentId');
 
             $db->bindParam(':dateCreated', property_exists($input, 'dateCreated') ? $input->dateCreated : null);
@@ -68,7 +69,8 @@ if (is_null($input)) {
             $db->bindParam(':msExam', property_exists($input, 'msExam') ? $input->msExam : null);            
             $db->bindParam(':sdInterview', property_exists($input, 'sdInterview') ? $input->sdInterview : null);          
             $db->bindParam(':dsInterview', property_exists($input, 'dsInterview') ? $input->dsInterview : null);       
-            $db->bindParam(':msInterview', property_exists($input, 'msInterview') ? $input->msInterview : null);         
+            $db->bindParam(':msInterview', property_exists($input, 'msInterview') ? $input->msInterview : null);       
+            $db->bindParam(':accepted', property_exists($input, 'accepted') ? $input->accepted : null);         
        
             $db->execute();     
             $db->commit();

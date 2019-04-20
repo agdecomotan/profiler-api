@@ -59,7 +59,7 @@ try {
   	$mail->setFrom($mail->Username); 
   	$mail->addAddress($value->email); 
   	$mail->Subject = 'Track Profiling Result';   	
-  	$message = '<p>Dear '.$value->studentFirstName.',</p><br/><p>Here is the result of the track profiling: '.$trackTitle.'.</p><p>You may visit the college office to process enrollment.</p><br/><p>Regards,</p><p>'.$sign.'</p><p>College of Information and Communications Technology</p><p>West Visayas State University</p>'; 
+  	$message = '<p>Dear '.$value->studentFirstName.',</p><br/><p>Here is the result of the track profiling: '.$trackTitle.'.</p><p>Please reply to this email if the result is accepted.</p><br/><p>Regards,</p><p>'.$sign.'</p><p>College of Information and Communications Technology</p><p>West Visayas State University</p>'; 
   	$mail->msgHTML($message); 
   	$mail->AltBody = strip_tags($message); 
   	if(!$mail->send())

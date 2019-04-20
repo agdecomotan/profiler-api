@@ -29,6 +29,7 @@ class Profile
     public $email;
     public $studentNumber;
     public $gender;
+    public $accepted;
 
 
     public function __construct(array $data)
@@ -61,6 +62,7 @@ class Profile
             $this->email = $data['email'] ?? null;        
             $this->studentNumber = $data['studentNumber'] ?? null;
             $this->gender = $data['gender'] ?? null;
+            $this->accepted = $data['accepted'] ?? null;
         }
     }
 }
