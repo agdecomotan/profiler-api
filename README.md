@@ -1,51 +1,18 @@
-# profile-api
-
 # Profiler API
 
-TRACK PROFILER: AN AUTOMATED SYSTEM TO GENERATE SPECIALIZED COURSE TRACK OF BSIT STUDENTS FOR WEST VISAYAS STATE UNIVERSITY 
+TRACK PROFILER
+<br>
+An Automated System to Generate Specialized Course Track of BSIT Students for West Visayas State University
 <br>
 University of the Philippines Open University
 <br>
 
-<br>
-Notes:
-<br>
-https://awseducate.qwiklabs.com/home
-C:\xampp\htdocs
+This is the source code of API for Track Profiler.
+Deployed application can be accessed in:
 
-
-sudo mkdir profiler-api
-sudo chmod 777 profiler-api
-
-cd /var/www/html/
-https://imjustpureblood.ml/profiler-api/student/get.php
-
-
-git config credential.helper store
-git push https://github.com/agdecomotan/profiler-api.git
-
-Admin
--users
--change password
--course list
-
--Stage 1
-	Grade
-	Psych
-	>Track
-	>Rank (solo) / Rank (group)
-
--Stage 2
-	Interview
-	>Rank (solo) / Rank (group)
+https://imjustpureblood.ml/profiler-api/
 
 
 
 
-Profile Initial
-Profile Final
-Validation
-Add user status
 
-Sort
-Tab fix layout

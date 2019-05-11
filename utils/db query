@@ -1,9 +1,3 @@
-sudo sqlite3​ profiler.db 
-.tables
-.exit
-
-DROP TABLE addresses;
-
 CREATE TABLE students(
 id INTEGER PRIMARY KEY,
 studentNumber TEXT,
@@ -82,100 +76,20 @@ value) VALUES
 ('quota',
 '0');
 
-INSERT INTO students(
-studentNumber,
-firstName,
-lastName,
-yearLevel,
-program,
-email) VALUES
-('2008-0009',
-'Jo Ryan',
-'Basco',
-'2',
-'BSIT',
-'agdecomotan@yahoo.com');
+----------------------------------------------
 
-INSERT INTO grades(
-courseId,
-studentId,
-value,
-term,
-year) VALUES
-('1',
-'6',
-'1.75',
-'1ST',
-'2015');
+.tables
+.exit
 
-INSERT INTO grades(
-courseId,
-studentId,
-value,
-term,
-year) VALUES
-('2',
-'6',
-'2',
-'1ST',
-'2015');
-
-INSERT INTO grades(
-courseId,
-studentId,
-value,
-term,
-year) VALUES
-('3',
-'6',
-'1.5',
-'1ST',
-'2015');
-
-INSERT INTO grades(
-courseId,
-studentId,
-value,
-term,
-year) VALUES
-('4',
-'6',
-'1',
-'1ST',
-'2015');
-
-INSERT INTO grades(
-courseId,
-studentId,
-value,
-term,
-year) VALUES
-('5',
-'6',
-'1.25',
-'1ST',
-'2015');
-
-INSERT INTO grades(
-courseId,
-studentId,
-value,
-term,
-year) VALUES
-('6',
-'6',
-'1.5',
-'1ST',
-'2015');
+DROP TABLE addresses;
 
 UPDATE students
 SET gender = 'M' 
 WHERE id = 5;
 
--------
-
-
 sudo chown -R apache profiler-api
 sudo chmod -R 775 profiler.db
-
 sudo usermod -a -G pi www-data
+
+cd /var/www/html/profiler-api/utils
+sudo sqlite3​ profiler.db

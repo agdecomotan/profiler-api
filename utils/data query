@@ -1,0 +1,299 @@
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1003','Key','Acanto','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1004','Erika May','Amarilla','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1005','Emmeve Florelise','Ampunan','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1006','Salvador','Ballesteros','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1007','Jo Ryan','Basco','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1008','Ellen Grace','Bito-onon','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1009','Rachel','Camince','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1010','Joe Mar','Castilla','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1011','Reynan Victor','Cercado','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1012','Darbie','Corsino','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1013','Diana Frances','Daguay','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1014','Anelie','Decomotan','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1015','Jeric Ryan','De Josef','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1016','Arly','Elarmo','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1017','Mark Laurence','Faigones','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1018','Winona','Fajermo','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1019','Gerdee','Galaez','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1020','Samuel John','Galunan','2','BSIT','agdecomotan@yahoo.com');
+
+INSERT INTO students(studentNumber,firstName,lastName,yearLevel,program,email) 
+VALUES('2014-1021','John Mark','Gegantoni','2','BSIT','agdecomotan@yahoo.com');
+
+--------------------------------------------------
+
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('1','1','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('2','1','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('3','1','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('7','1','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('4','1','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('6','1','100','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('1','2','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('2','2','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('3','2','100','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('7','2','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('4','2','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('6','2','96','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('1','2','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('2','3','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('3','3','100','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('7','3','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('4','3','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('6','3','100','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('1','4','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('2','4','100','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('3','4','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('7','4','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('4','4','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('6','4','92','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('1','5','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('2','5','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('3','5','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('7','5','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('4','5','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('6','5','100,'1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('1','6','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('2','6','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('3','6','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('7','6','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('4','6','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('6','6','92','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('1','7','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('2','7','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('3','7','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('7','7','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('4','7','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('6','7','92','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('1','8','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('2','8','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('3','8','86','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('7','8','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('4','8','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) 
+VALUES('6','8','92','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','9','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','9','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','9','100','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','9','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','9','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','9','100','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','10','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','10','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','10','86','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','10','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','10','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','10','92','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','11','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','11','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','11','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','11','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','11','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','11','96','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','12','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','12','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','12','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','12','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','12','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','12','92','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','13','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','13','100','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','13','86','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','13','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','13','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','13','100','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','14','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','14','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','14','86','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','14','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','14','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','14','92','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','15','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','15','86','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','15','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','15','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','15','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','15','92','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','16','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','16','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','16','86','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','16','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','16','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','16','100','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','17','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','17','86','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','17','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','17','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','17','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','17','92','1ST','2018');
+
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('1','18','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('2','18','92','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('3','18','88','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('9','18','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('4','18','96','1ST','2018');
+INSERT INTO grades(courseId,studentId,value,term,year) VALUES('6','18','100','1ST','2018');
+
+----------------------------------------------
+
+UPDATE students SET gender = 'F' WHERE id = 1;
+UPDATE students SET gender = 'F' WHERE id = 2;
+UPDATE students SET gender = 'F' WHERE id = 3;
+UPDATE students SET gender = 'M' WHERE id = 4;
+UPDATE students SET gender = 'M' WHERE id = 5;
+UPDATE students SET gender = 'F' WHERE id = 6;
+UPDATE students SET gender = 'F' WHERE id = 7;
+UPDATE students SET gender = 'M' WHERE id = 8;
+UPDATE students SET gender = 'M' WHERE id = 9;
+UPDATE students SET gender = 'M' WHERE id = 10;
+UPDATE students SET gender = 'F' WHERE id = 11;
+UPDATE students SET gender = 'F' WHERE id = 12;
+UPDATE students SET gender = 'M' WHERE id = 13;
+UPDATE students SET gender = 'M' WHERE id = 14;
+UPDATE students SET gender = 'M' WHERE id = 15;
+UPDATE students SET gender = 'F' WHERE id = 16;
+UPDATE students SET gender = 'F' WHERE id = 17;
+UPDATE students SET gender = 'M' WHERE id = 18;
+UPDATE students SET gender = 'M' WHERE id = 19;
+
+
+---------------------------------------------------
+
+
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Distributed Systems','Initial','1','28', '27', '26');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Multimedia Studies','Initial','2','26', '25', '27');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Multimedia Studies','Initial','3','25', '24', '25');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Software Development','Initial','4','28', '29', '27');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Multimedia Studies','Initial','5','27', '26', '27');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Distributed Systems','Initial','6','25', '23', '28');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Distributed Systems','Initial','7','20', '25', '22');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Multimedia Studies','Initial','8','22', '27', '28');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','MMultimedia Studiesultimedia Studies','Initial','9','24', '28', '22');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Distributed Systems','Initial','10','27', '27', '25');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Multimedia Studies','Initial','11','28', '29', '21');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Distributed Systems','Initial','12','20', '27', '21');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Software Development','Initial','13','21', '22', '26');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Software Development','Initial','14','20', '21', '23');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Multimedia Studies','Initial','15','27', '25', '28');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Software Development','Initial','16','28', '21', '25');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Software Development','Initial','17','20', '21', '25');
+INSERT INTO profiles(dateCreated,studentChoice,status,studentId,sdExam,dsExam,msExam) VALUES('2019-04-30 10:33:53','Distributed Systems','Initial','18','22', '26', '27');
+
+
+---------------------------------------------------
+
+UPDATE profiles SET sdInterview = 8, dsInterview = 9, msInterview = 8 WHERE id = 1;
+UPDATE profiles SET sdInterview = 5, dsInterview = 7, msInterview = 6 WHERE id = 2;
+UPDATE profiles SET sdInterview = 8, dsInterview = 8, msInterview = 7 WHERE id = 3;
+UPDATE profiles SET sdInterview = 6, dsInterview = 7, msInterview = 7 WHERE id = 4;
+UPDATE profiles SET sdInterview = 9, dsInterview = 8, msInterview = 7 WHERE id = 5;
+UPDATE profiles SET sdInterview = 7, dsInterview = 8, msInterview = 7 WHERE id = 6;
+UPDATE profiles SET sdInterview = 8, dsInterview = 9, msInterview = 7 WHERE id = 7;
+UPDATE profiles SET sdInterview = 8, dsInterview = 7, msInterview = 6 WHERE id = 8;
+UPDATE profiles SET sdInterview = 8, dsInterview = 8, msInterview = 7 WHERE id = 9;
+UPDATE profiles SET sdInterview = 7, dsInterview = 8, msInterview = 6 WHERE id = 10;
+UPDATE profiles SET sdInterview = 9, dsInterview = 7, msInterview = 7 WHERE id = 11;
+UPDATE profiles SET sdInterview = 8, dsInterview = 7, msInterview = 8 WHERE id = 12;
+UPDATE profiles SET sdInterview = 8, dsInterview = 7, msInterview = 9 WHERE id = 13;
+UPDATE profiles SET sdInterview = 9, dsInterview = 6, msInterview = 7 WHERE id = 14;
+UPDATE profiles SET sdInterview = 8, dsInterview = 7, msInterview = 8 WHERE id = 15;
+UPDATE profiles SET sdInterview = 7, dsInterview = 8, msInterview = 8 WHERE id = 16;
+UPDATE profiles SET sdInterview = 8, dsInterview = 7, msInterview = 6 WHERE id = 17;
+UPDATE profiles SET sdInterview = 9, dsInterview = 8, msInterview = 7 WHERE id = 18;
