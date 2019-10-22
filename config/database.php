@@ -1,0 +1,16 @@
+'mysql' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', 'remotemysql.com'),
+            'port' => env('DB_PORT', '3306'),
++           'database' => env('DB_DATABASE', 'KnUEJ2VAWl'),
++           'username' => env('DB_USERNAME', 'KnUEJ2VAWl'),
++           'password' => env('DB_PASSWORD', 'sC0m8bCARB'),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'options' => [PDO::ATTR_EMULATE_PREPARES => true],
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+        ]
