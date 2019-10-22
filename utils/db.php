@@ -8,7 +8,8 @@ class Db
     private $statement;
     public function __construct($query)
     {
-        $this->pdo = new PDO('sqlite:' . $_SERVER['DOCUMENT_ROOT'] .'/profiler-api/utils/profiler.db');
+        // $this->pdo = new PDO('sqlite:' . $_SERVER['DOCUMENT_ROOT'] .'/profiler-api/utils/profiler.db');
+        $this->pdo = new PDO('mysql:dbname=KnUEJ2VAWl;host=remotemysql.com;port=3306;', 'KnUEJ2VAWl', 'sC0m8bCARB');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->pdo->beginTransaction();
         $this->statement = $this->pdo->prepare($query);
