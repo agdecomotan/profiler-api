@@ -10,7 +10,7 @@ University of the Philippines Open University
 This is the source code of API for Track Profiler.
 Deployed application can be accessed in:
 
-https://imjustpureblood.ml/profiler-api/
+https://track-profiler.netlify.com
 
 
 

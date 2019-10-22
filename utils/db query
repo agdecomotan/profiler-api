@@ -91,5 +91,5 @@ sudo chown -R apache profiler-api
 sudo chmod -R 775 profiler.db
 sudo usermod -a -G pi www-data
 
-cd /var/www/html/profiler-api/utils
+cd /var/www/html/utils
 sudo sqlite3​ profiler.db

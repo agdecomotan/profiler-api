@@ -1,8 +1,8 @@
 <?php
 namespace AGD\Profiler;
 
-require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/db.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/profiler-api/utils/http.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/utils/db.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/utils/http.php';
 
 use Exception;
 use PDOException;
