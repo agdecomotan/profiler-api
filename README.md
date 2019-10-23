@@ -8,8 +8,8 @@ University of the Philippines Open University
 <br>
 
 This is the source code of API for Track Profiler.
-Deployed application can be accessed in:
 
+Deployed application can be accessed in:
 https://track-profiler.netlify.com
 
 
